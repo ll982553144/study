@@ -89,7 +89,7 @@
         // for循环绑定点击事件
         for (var i = 0; i < lis.length; i++) {
             // 开始给5个小li 设置索引号 
-            lis[i].setAttribute('index', i);
+            lis[i].setAttribute('index',i);
             lis[i].onclick = function() {
                 // 1. 上的模块选项卡，点击某一个，当前这一个底色会是红色，其余不变（排他思想） 修改类名的方式
 
@@ -97,7 +97,7 @@
                 for (var i = 0; i < lis.length; i++) {
                     lis[i].className = '';
                 }
-                // 留下我自己 
+                // 留下我自己  
                 this.className = 'current';
                 // 2. 下面的显示内容模块
                 var index = this.getAttribute('index');

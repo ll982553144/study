@@ -10,7 +10,7 @@
     <div>{{msg | upper}}</div>
     <div>{{msg | upper | lower}}</div>
     <div :abc='msg | upper'>测试数据</div>
-  </div>
+  </div> 
   <script type="text/javascript" src="js/vue.js"></script>
   <script type="text/javascript">
     /*
@@ -30,7 +30,7 @@
         msg: ''
       },
       filters: {
-        upper: function(val) {
+        upper : function(val) {
           return val.charAt(0).toUpperCase() + val.slice(1);
         }
       }

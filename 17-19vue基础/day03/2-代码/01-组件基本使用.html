@@ -16,9 +16,10 @@
       组件注册
     */
     Vue.component('button-counter', {
-      data: function(){
+      data: function() {
         return {
-          count: 0
+          count:0
+          
         }
       },
       template: '<button @click="handle">点击了{{count}}次</button>',

@@ -14,19 +14,19 @@
     /*
       父组件向子组件传值-props属性名规则
     */
-    Vue.component('third-com', {
-      props: ['testTile'],
+    Vue.component('third-name',{
+      props: [testTile],
       template: '<div>{{testTile}}</div>'
     });
-    Vue.component('menu-item', {
-      props: ['menuTitle'],
-      template: '<div>{{menuTitle}}<third-com testTile="hello"></third-com></div>'
+    Vue.component('menu-item',{
+      props: ['menuTile'],
+      template:'<div>{{menuTile}}<third-com testTile="hello"></third-com></div>'
     });
     var vm = new Vue({
-      el: '#app',
+      el:'#app',
       data: {
-        pmsg: '父组件中内容',
-        ptitle: '动态绑定属性'
+        pmsg: '父组件',
+        ptitle : ''
       }
     });
   </script>

@@ -8,7 +8,7 @@
   <div id="app">
     <div :style='{fontSize: fontSize + "px"}'>{{pmsg}}</div>
     <menu-item :parr='parr' @enlarge-text='handle'></menu-item>
-  </div>
+  </div> 
   <script type="text/javascript" src="js/vue.js"></script>
   <script type="text/javascript">
     /*
@@ -16,15 +16,16 @@
       props传递数据原则：单向数据流
     */
     
-    Vue.component('menu-item', {
+    Vue.component('menu-item',{
       props: ['parr'],
       template: `
-        <div>
-          <ul>
+      <div>
+        <ul>
             <li :key='index' v-for='(item,index) in parr'>{{item}}</li>
-          </ul>
-          <button @click='$emit("enlarge-text")'>扩大父组件中字体大小</button>
-        </div>
+        </ul>
+        <buttom @click='parr.push("lemon")'>点击</buttom>
+        <button @click='$emit("enlarge-text")'>扩大父组件</button>
+      </div>
       `
     });
     var vm = new Vue({
@@ -36,10 +37,10 @@
       },
       methods: {
         handle: function(){
-          // 扩大字体大小
+          //扩大字体大小
           this.fontSize += 5;
         }
-      }
+      },
     });
   </script>
 </body>

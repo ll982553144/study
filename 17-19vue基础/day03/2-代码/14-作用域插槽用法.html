@@ -23,8 +23,8 @@
     /*
       作用域插槽
     */
-    Vue.component('fruit-list', {
-      props: ['list'],
+    Vue.component('fruit-list',{
+      pops: 'list',
       template: `
         <div>
           <li :key='item.id' v-for='item in list'>

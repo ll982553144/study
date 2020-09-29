@@ -1,0 +1,23 @@
+账号 ： ll982553144
+密码 ： www.982553144
+git init
+
+git status 
+
+git add .
+
+git commit -m (备注)
+
+git push git@github.com:ll982553144/demo.git master
+
+<!--
+git push git@github.com:ll982553144/demo.git master -f
+-->
+
+git status 
+
+git add .
+
+git commit -m (备注)
+
+git push
